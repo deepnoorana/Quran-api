@@ -1,0 +1,27 @@
+def sign( x)
+  if x>0
+    print( x " is positve " )
+  elif x <0
+    print ( x " is negative")
+  else
+    print ( x "is zero")
+    +-------------------+
+                        |    المستخدمين     |
+                        +-------------------+
+                                  |
+                                  v
+                          [Frontend - React]
+                                  |
+                     REST APIs / WebSocket / GraphQL
+                                  |
++------------------+       +-------------------+       +------------------+
+|  Auth & API      |<----->|    FastAPI App    |<----->|   WebSocket Hub  |
+|  (JWT, Guards)   |       | (Business Logic)  |       | (Real-time Layer)|
++------------------+       +-------------------+       +------------------+
+                                  |
+                      +-----------+-----------+
+                      |                       |
+               +-------------+         +-------------+
+               |   MongoDB   |         |   S3 Bucket  |
+               | (Users, ...)|         | (Media Files)|
+               +-------------+         +-------------+
